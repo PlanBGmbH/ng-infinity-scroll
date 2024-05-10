@@ -1,7 +1,37 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-  }
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"newProjectRoot": "projects",
+	"projects": {
+		"ng-infinite-scroll": {
+			"projectType": "library",
+			"root": "projects/ng-infinite-scroll",
+			"sourceRoot": "projects/ng-infinite-scroll/src",
+			"prefix": "lib",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:ng-packagr",
+					"options": {
+						"project": "projects/ng-infinite-scroll/ng-package.json"
+					},
+					"configurations": {
+						"production": {
+							"tsConfig": "projects/ng-infinite-scroll/tsconfig.lib.prod.json"
+						},
+						"development": {
+							"tsConfig": "projects/ng-infinite-scroll/tsconfig.lib.json"
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"tsConfig": "projects/ng-infinite-scroll/tsconfig.spec.json",
+						"polyfills": ["zone.js", "zone.js/testing"]
+					}
+				}
+			}
+		}
+	}
 }
