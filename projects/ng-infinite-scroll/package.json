@@ -1,0 +1,17 @@
+{
+	"name": "@planbgmbh/ng-infinite-scroll",
+	"version": "0.0.0",
+	"author": {
+		"name": "Aaron Czichon, PlanB. GmbH",
+		"email": "aaron.czichon@plan-b-gmbh.com"
+	},
+	"license": "GPL-3.0-only",
+	"peerDependencies": {
+		"@angular/common": ">=17.0.0",
+		"@angular/core": ">=17.0.0"
+	},
+	"dependencies": {
+		"tslib": "^2.3.0"
+	},
+	"sideEffects": false
+}
