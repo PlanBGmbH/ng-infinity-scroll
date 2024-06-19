@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgInfiniteScrollService } from './ng-infinite-scroll.service';
+import { NgInfiniteScrollService } from '../ng-infinite-scroll.service';
 
 describe('NgInfiniteScrollService', () => {
 	let service: NgInfiniteScrollService;
