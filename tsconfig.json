@@ -3,8 +3,7 @@
 	"compileOnSave": false,
 	"compilerOptions": {
 		"paths": {
-			"@planbgmbh/ng-infinite-scroll": ["./dist/planbgmbh/ng-infinite-scroll"],
-			"ng-infinite-scroll": ["./dist/ng-infinite-scroll"]
+			"@planbgmbh/ng-infinite-scroll": ["./projects/ng-infinite-scroll/src/public-api.ts"]
 		},
 		"outDir": "./dist/out-tsc",
 		"forceConsistentCasingInFileNames": true,

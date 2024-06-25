@@ -4,4 +4,3 @@
 
 export * from './lib/component/ng-infinite-scroll.component';
 export * from './lib/directive/ng-infinite-scroll.directive';
-export * from './lib/ng-infinite-scroll.service';
