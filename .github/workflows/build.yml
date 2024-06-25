@@ -1,0 +1,53 @@
+name: Build on Pull Request
+
+on: pull_request
+
+jobs:
+  build-library:
+    name: Build Library
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Library
+        run: npm run lib:build
+  build-demo-app:
+    name: Build Demo App
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Demo app
+        run: npm run build
+  verify-changelog:
+    name: Verify Changelog
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Changelog Reader
+        uses: mindsers/changelog-reader-action@v2.2.0
+        with:
+          # Path to the CHANGELOG file containing the log entries
+          path: ./projects/ng-infinite-scroll/CHANGELOG.md
+          # Specifies if the CHANGELOG.md file should be validated and the behavior of the action
+          validation_level: error

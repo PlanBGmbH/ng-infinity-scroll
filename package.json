@@ -9,7 +9,7 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
-		"build": "ng build",
+		"build": "ng build ng-infinite-scroll-demo",
 		"lib:build": "ng build ng-infinite-scroll",
 		"lint": "ng lint",
 		"watch": "ng build --watch --configuration development",
