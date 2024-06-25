@@ -32,6 +32,91 @@
 					}
 				}
 			}
+		},
+		"ng-infinite-scroll-demo": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss"
+				}
+			},
+			"root": "projects/ng-infinite-scroll-demo",
+			"sourceRoot": "projects/ng-infinite-scroll-demo/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:application",
+					"options": {
+						"outputPath": "dist/ng-infinite-scroll-demo",
+						"index": "projects/ng-infinite-scroll-demo/src/index.html",
+						"browser": "projects/ng-infinite-scroll-demo/src/main.ts",
+						"polyfills": ["zone.js"],
+						"tsConfig": "projects/ng-infinite-scroll-demo/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/ng-infinite-scroll-demo/src/favicon.ico",
+							"projects/ng-infinite-scroll-demo/src/assets"
+						],
+						"styles": ["projects/ng-infinite-scroll-demo/src/styles.scss"],
+						"scripts": []
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "2kb",
+									"maximumError": "4kb"
+								}
+							],
+							"outputHashing": "all"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "ng-infinite-scroll-demo:build:production"
+						},
+						"development": {
+							"buildTarget": "ng-infinite-scroll-demo:build:development"
+						}
+					},
+					"defaultConfiguration": "development"
+				},
+				"extract-i18n": {
+					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"options": {
+						"buildTarget": "ng-infinite-scroll-demo:build"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"polyfills": ["zone.js", "zone.js/testing"],
+						"tsConfig": "projects/ng-infinite-scroll-demo/tsconfig.spec.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/ng-infinite-scroll-demo/src/favicon.ico",
+							"projects/ng-infinite-scroll-demo/src/assets"
+						],
+						"styles": ["projects/ng-infinite-scroll-demo/src/styles.scss"],
+						"scripts": []
+					}
+				}
+			}
 		}
 	}
 }

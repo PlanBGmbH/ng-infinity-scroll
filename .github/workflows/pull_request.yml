@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
@@ -25,15 +25,32 @@ jobs:
 
       - name: Build Library
         run: npm run lib:build
+  build-demo-app:
+    name: Build Demo App
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Demo app
+        run: npm run build
   verify-changelog:
     name: Verify Changelog
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Changelog Reader
-        uses: mindsers/changelog-reader-action@v2.2.0
+        uses: mindsers/changelog-reader-action@v2.2.3
         with:
           # Path to the CHANGELOG file containing the log entries
           path: ./projects/ng-infinite-scroll/CHANGELOG.md
