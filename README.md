@@ -39,6 +39,14 @@ import { NgScrollObserverDirective } from '@planbgmbh/ng-infinite-scroll';
 </div>
 ```
 
+## Supported Angular Version
+
+We currently support every Angular Version with a minimum requirement of Angular 17.0.0.
+
+| Package Version | Supported Angular Version |
+| --------------- | ------------------------- |
+| 1.x             | 17, 18                    |
+
 ## Credits
 
 Image generated from DALL-E with prompt: `Angular Infinity Scroll`
