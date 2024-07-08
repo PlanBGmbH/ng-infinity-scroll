@@ -72,6 +72,7 @@ jobs:
       - run: npm ci
       - run: npm run lib:build
       - run: node build/update-version.js --version ${{ needs.define-variables.outputs.version }}
+      - run: cp README.md dist/ng-infinite-scroll
       - run: cd dist/ng-infinite-scroll && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
