@@ -14,7 +14,7 @@
 		"vscode": {
 			"extensions": [
 				"Angular.ng-template",
-				"esbenp.prettier-vscode",
+				"biomejs.biome",
 				"mutantdino.resourcemonitor",
 				"GitHub.vscode-github-actions"
 			]
