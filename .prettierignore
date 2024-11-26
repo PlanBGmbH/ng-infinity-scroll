@@ -1,7 +1,0 @@
-dist/**
-src/assets/*
-!src/assets/i18n/
-documentation/**
-build.ts
-tmp/
-.angular/**
