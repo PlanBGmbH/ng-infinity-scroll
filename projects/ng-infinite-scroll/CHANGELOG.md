@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Improvements
 
 - Switched from `Prettier` to `Biome`. Same code style, but with better performance.
+- Updated to latest versions of Github workflow actions.
 
 ## [1.0.0] - 2024-07-08
 
