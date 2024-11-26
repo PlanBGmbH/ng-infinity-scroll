@@ -45,7 +45,8 @@ We currently support every Angular Version with a minimum requirement of Angular
 
 | Package Version | Supported Angular Version |
 | --------------- | ------------------------- |
-| 1.x             | 17, 18                    |
+| 1.0.0           | 17, 18                    |
+| 1.1.0           | 17, 18, 19                |
 
 ## Credits
 
