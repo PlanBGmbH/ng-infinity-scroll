@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Supporting Angular v19 now
 
-### Improvements
+### Changed
 
 - Switched from `Prettier` to `Biome`. Same code style, but with better performance
 - Updated to latest versions of Github workflow actions
